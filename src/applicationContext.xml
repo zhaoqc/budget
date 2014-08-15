@@ -60,8 +60,8 @@
 	<bean id="yearProjectBudgetingServiceTest" class="service.YearProjectBudgetingServiceTest">
 		<property name="yearProjectBudgetingService" ref="yearProjectBudgetingService"></property>
 	</bean>
-	<!-- <bean id="yearProjectBudgetServiceTest" class="service.YearProjectBudgetServiceTest">
+	 <bean id="yearProjectBudgetServiceTest" class="service.YearProjectBudgetServiceTest">
 		<property name="yearProjectBudgetService" ref="yearProjectBudgetService"></property>
-	</bean> -->
+	</bean>
 	
 </beans>

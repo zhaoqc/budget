@@ -136,11 +136,6 @@ public class YearProjectBudgetServiceTest {
 		}
 		System.out.println(header);
 	}
-
-	public void setYearProjectBudgetIssuedService(
-			YearProjectBudgetService yearProjectBudgetIssuedService) {
-		this.yearProjectBudgetService = yearProjectBudgetIssuedService;
-	}
 	
 	public void updateRejectProject(Integer id) {
 		this.yearProjectBudgetService.rejectProject(id);
@@ -153,6 +148,11 @@ public class YearProjectBudgetServiceTest {
 	public void getOrgProjectReport(Integer orgId,Integer year){
 		List<Map<String,Object>> org = this.yearProjectBudgetService.getOrgProjectReport(orgId, year);
 		System.out.println(org.get(0).get("org_id"));
+	}
+
+	public void setYearProjectBudgetService(
+			YearProjectBudgetService yearProjectBudgetService) {
+		this.yearProjectBudgetService = yearProjectBudgetService;
 	}
 
 
