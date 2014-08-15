@@ -23,7 +23,7 @@
         <property name="userId" type="java.lang.Integer">
             <column name="user_id" />
         </property>
-        <property name="entryDatetime" type="java.sql.Timestamp">
+        <property name="entryDatetime" type="java.util.Date">
             <column name="entry_datetime" length="19" />
         </property>
         <property name="comments" type="java.lang.String">

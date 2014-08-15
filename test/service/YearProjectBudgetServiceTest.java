@@ -24,7 +24,7 @@ public class YearProjectBudgetServiceTest {
 	
 	public void saveBudget(){
 		YearBudgetHeader header = new YearBudgetHeader();
-		header.setId(4);
+		header.setId(5);
 		header.setSysOrg(new SysOrg(1));
 		header.setAmount(new BigDecimal(1000));
 		header.setProjectCode(10001);
@@ -36,7 +36,7 @@ public class YearProjectBudgetServiceTest {
 		header.setEndDate(DateUtils.getDate("2014-04-30", "yyyy-MM-dd"));
 		Set<YearBudgetDetail> detailSet = new HashSet<YearBudgetDetail>();
 		YearBudgetDetail detail = new YearBudgetDetail();
-		detail.setId(4);
+		detail.setId(5);
 		detail.setActivityInfo(new ActivityInfo("B0101"));
 		detail.setAmount(new BigDecimal(1000));
 		detail.setSubjectInfo(new SubjectInfo("P0101"));
@@ -45,19 +45,19 @@ public class YearProjectBudgetServiceTest {
 		header.setDetailSet(detailSet);
 		Set<YearBudgetMonth> monthSet = new HashSet<YearBudgetMonth>();
 		YearBudgetMonth month = new YearBudgetMonth();
-		month.setId(new YearBudgetMonthId(4,1));
+		month.setId(new YearBudgetMonthId(5,1));
 		month.setAmount(new BigDecimal(250));
 		monthSet.add(month);
 		month = new YearBudgetMonth();
-		month.setId(new YearBudgetMonthId(4,2));
+		month.setId(new YearBudgetMonthId(5,2));
 		month.setAmount(new BigDecimal(250));
 		monthSet.add(month);
 		month = new YearBudgetMonth();
-		month.setId(new YearBudgetMonthId(4,3));
+		month.setId(new YearBudgetMonthId(5,3));
 		month.setAmount(new BigDecimal(250));
 		monthSet.add(month);
 		month = new YearBudgetMonth();
-		month.setId(new YearBudgetMonthId(4,4));
+		month.setId(new YearBudgetMonthId(5,4));
 		month.setAmount(new BigDecimal(250));
 		monthSet.add(month);
 		detail.setMonthSet(monthSet);

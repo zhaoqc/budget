@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
- * 省公司级预留
+ * 分公司级预留
  * BudgetCompanyReserve entity. @author MyEclipse Persistence Tools
  */
 

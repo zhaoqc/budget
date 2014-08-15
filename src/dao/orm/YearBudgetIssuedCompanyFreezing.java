@@ -1,7 +1,7 @@
 ﻿package dao.orm;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * YearBudgetIssuedCompanyFreezing entity. @author MyEclipse Persistence Tools
@@ -22,11 +22,11 @@ public class YearBudgetIssuedCompanyFreezing implements java.io.Serializable {
 //	创建人ID
 	private Integer userId;
 //	插入时间
-	private Timestamp entryDatetime;
+	private Date entryDatetime;
 //	删除人ID
 	private Integer deleteId;
 //	删除时间
-	private Timestamp deleteDatetime;
+	private Date deleteDatetime;
 //	冻结项目ID
 	private Integer projectId;
 //	冻结原因
@@ -73,11 +73,11 @@ public class YearBudgetIssuedCompanyFreezing implements java.io.Serializable {
 		this.userId = userId;
 	}
 
-	public Timestamp getEntryDatetime() {
+	public Date getEntryDatetime() {
 		return this.entryDatetime;
 	}
 
-	public void setEntryDatetime(Timestamp entryDatetime) {
+	public void setEntryDatetime(Date entryDatetime) {
 		this.entryDatetime = entryDatetime;
 	}
 
@@ -89,11 +89,11 @@ public class YearBudgetIssuedCompanyFreezing implements java.io.Serializable {
 		this.deleteId = deleteId;
 	}
 
-	public Timestamp getDeleteDatetime() {
+	public Date getDeleteDatetime() {
 		return this.deleteDatetime;
 	}
 
-	public void setDeleteDatetime(Timestamp deleteDatetime) {
+	public void setDeleteDatetime(Date deleteDatetime) {
 		this.deleteDatetime = deleteDatetime;
 	}
 

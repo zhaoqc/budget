@@ -1,7 +1,8 @@
 ﻿package dao.orm;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.util.Date;
+import java.util.Set;
 
 /**
  * YearBudgetIssuedCompany entity. @author MyEclipse Persistence Tools
@@ -26,15 +27,26 @@ public class YearBudgetIssuedCompany implements java.io.Serializable {
 //	创建用户ID
 	private Integer userId;
 //	创建时间
-	private Timestamp entryDatetime;
+	private Date entryDatetime;
 //	删除用户ID
 	private Integer deleteId;
 //	删除时间
-	private Timestamp deleteDatetime;
+	private Date deleteDatetime;
 //	预留金额
 	private BigDecimal reserveAmount;
 //	下达说明
 	private String comments;
+	
+	private Set<BudgetCompanyReserve> reservesSet;
+	
+	private Set<BudgetResourceUsed> resourceUseds;
+	
+	private Set<BudgetResourceFreezing> resourceFreezings;
+	
+	private Set<BudgetResourceTotal> resourceTotals;
+	
+	private Set<BudgetResourceActual> resourceActuals;
+	
 	// Constructors
 
 	/** default constructor */
@@ -90,11 +102,11 @@ public class YearBudgetIssuedCompany implements java.io.Serializable {
 		this.userId = userId;
 	}
 
-	public Timestamp getEntryDatetime() {
+	public Date getEntryDatetime() {
 		return this.entryDatetime;
 	}
 
-	public void setEntryDatetime(Timestamp entryDatetime) {
+	public void setEntryDatetime(Date entryDatetime) {
 		this.entryDatetime = entryDatetime;
 	}
 
@@ -106,11 +118,11 @@ public class YearBudgetIssuedCompany implements java.io.Serializable {
 		this.deleteId = deleteId;
 	}
 
-	public Timestamp getDeleteDatetime() {
+	public Date getDeleteDatetime() {
 		return this.deleteDatetime;
 	}
 
-	public void setDeleteDatetime(Timestamp deleteDatetime) {
+	public void setDeleteDatetime(Date deleteDatetime) {
 		this.deleteDatetime = deleteDatetime;
 	}
 

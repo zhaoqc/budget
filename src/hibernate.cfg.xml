@@ -11,7 +11,8 @@
 		org.hibernate.dialect.MySQLDialect
 	</property>
 	<property name="connection.url">
-		jdbc:mysql://localhost:3306/budget
+		jdbc:mysql://localhost:3306/budget?useUnicode=true&amp;characterEncoding=gbk
+		<!--编码与数据库不统一  -->
 	</property>
 	<property name="connection.username">root</property>
 	<property name="connection.password">root</property>

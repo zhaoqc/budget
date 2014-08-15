@@ -1,24 +1,35 @@
 ﻿package dao.orm;
 
+import java.math.BigDecimal;
+
 /**
- * BudgetResourceActual entity. @author MyEclipse Persistence Tools
+ * 目前的预算资源 entity. @author MyEclipse Persistence Tools
  */
 
 public class BudgetResourceActual implements java.io.Serializable {
 
-	// Fields
 
+	private static final long serialVersionUID = 7363587215794860678L;
+	//	ID
 	private Integer id;
+//	项目编码
 	private Integer projectCode;
+//	年份
 	private Integer year;
+//	业务活动编码
 	private String activityCode;
+//	科目编码
 	private String subjectCode;
-	private Double amount;
+//	金额
+	private BigDecimal amount;
+//	属性 0年度,1日常项目  
 	private Integer resourceType;
+//	年度预算头表ID
 	private Integer referenceId;
+//	年度预算详细ID
 	private Integer referenceDetailId;
+//	机构属性 1.公司;2.分公司;3.部门
 	private Integer referenceType;
-
 	// Constructors
 
 	/** default constructor */
@@ -32,7 +43,7 @@ public class BudgetResourceActual implements java.io.Serializable {
 
 	/** full constructor */
 	public BudgetResourceActual(Integer id, Integer projectCode, Integer year,
-			String activityCode, String subjectCode, Double amount,
+			String activityCode, String subjectCode, BigDecimal amount,
 			Integer resourceType, Integer referenceId,
 			Integer referenceDetailId, Integer referenceType) {
 		this.id = id;
@@ -89,11 +100,11 @@ public class BudgetResourceActual implements java.io.Serializable {
 		this.subjectCode = subjectCode;
 	}
 
-	public Double getAmount() {
+	public BigDecimal getAmount() {
 		return this.amount;
 	}
 
-	public void setAmount(Double amount) {
+	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
 

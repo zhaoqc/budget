@@ -17,13 +17,13 @@
                 <column name="version" />
             </key-property>
         </composite-id>
-        <property name="amount" type="java.lang.Double">
+        <property name="amount" type="java.math.BigDecimal">
             <column name="amount" precision="11" scale="4" />
         </property>
         <property name="userId" type="java.lang.Integer">
             <column name="user_id" />
         </property>
-        <property name="entryDatetime" type="java.sql.Timestamp">
+        <property name="entryDatetime" type="java.util.Date">
             <column name="entry_datetime" length="19" />
         </property>
         <property name="comments" type="java.lang.String">

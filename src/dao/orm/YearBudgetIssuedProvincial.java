@@ -1,7 +1,7 @@
 ﻿package dao.orm;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -23,16 +23,16 @@ public class YearBudgetIssuedProvincial implements java.io.Serializable {
 //	创建人
 	private Integer userId;
 //	插入时间
-	private Timestamp entryDatetime;
+	private Date entryDatetime;
 //	删除人
 	private Integer deleteId;
 //	删除时间
-	private Timestamp deleteDatetime;
+	private Date deleteDatetime;
 //	备注
 	private String comments;
 //	预留金额
 	private BigDecimal reserveAmount;
-//	分公司级别预留
+//	省公司级别预留
 	private Set<BudgetProvincialReserve> reserveSet;
 
 
@@ -98,11 +98,11 @@ public class YearBudgetIssuedProvincial implements java.io.Serializable {
 		this.userId = userId;
 	}
 
-	public Timestamp getEntryDatetime() {
+	public Date getEntryDatetime() {
 		return this.entryDatetime;
 	}
 
-	public void setEntryDatetime(Timestamp entryDatetime) {
+	public void setEntryDatetime(Date entryDatetime) {
 		this.entryDatetime = entryDatetime;
 	}
 
@@ -114,11 +114,11 @@ public class YearBudgetIssuedProvincial implements java.io.Serializable {
 		this.deleteId = deleteId;
 	}
 
-	public Timestamp getDeleteDatetime() {
+	public Date getDeleteDatetime() {
 		return this.deleteDatetime;
 	}
 
-	public void setDeleteDatetime(Timestamp deleteDatetime) {
+	public void setDeleteDatetime(Date deleteDatetime) {
 		this.deleteDatetime = deleteDatetime;
 	}
 

@@ -1,6 +1,6 @@
 ﻿package dao.orm;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * YearBudgetIssuedCompanyUsed entity. @author MyEclipse Persistence Tools
@@ -21,11 +21,11 @@ public class YearBudgetIssuedCompanyUsed implements java.io.Serializable {
 //	插入人ID
 	private Integer userId;
 //	插入时间
-	private Timestamp entryDatetime;
+	private Date entryDatetime;
 //	删除人ID
 	private Integer deleteId;
 //	删除时间
-	private Timestamp deleteDatetime;
+	private Date deleteDatetime;
 //	占用项目ID
 	private Integer projectId;
 //	占用说明
@@ -46,8 +46,8 @@ public class YearBudgetIssuedCompanyUsed implements java.io.Serializable {
 
 	/** full constructor */
 	public YearBudgetIssuedCompanyUsed(Integer id, Integer orgId, Integer year,
-			Double amount, Integer userId, Timestamp entryDatetime,
-			Integer deleteId, Timestamp deleteDatetime, Integer projectId,
+			Double amount, Integer userId, Date entryDatetime,
+			Integer deleteId, Date deleteDatetime, Integer projectId,
 			String comments) {
 		this.id = id;
 		this.orgId = orgId;
@@ -103,11 +103,11 @@ public class YearBudgetIssuedCompanyUsed implements java.io.Serializable {
 		this.userId = userId;
 	}
 
-	public Timestamp getEntryDatetime() {
+	public Date getEntryDatetime() {
 		return this.entryDatetime;
 	}
 
-	public void setEntryDatetime(Timestamp entryDatetime) {
+	public void setEntryDatetime(Date entryDatetime) {
 		this.entryDatetime = entryDatetime;
 	}
 
@@ -119,11 +119,11 @@ public class YearBudgetIssuedCompanyUsed implements java.io.Serializable {
 		this.deleteId = deleteId;
 	}
 
-	public Timestamp getDeleteDatetime() {
+	public Date getDeleteDatetime() {
 		return this.deleteDatetime;
 	}
 
-	public void setDeleteDatetime(Timestamp deleteDatetime) {
+	public void setDeleteDatetime(Date deleteDatetime) {
 		this.deleteDatetime = deleteDatetime;
 	}
 

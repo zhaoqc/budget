@@ -21,7 +21,7 @@ public class BudgetResourceTotal implements java.io.Serializable {
 	private String subjectCode;
 //	金额
 	private BigDecimal amount;
-//	属性 0年度,1日常项目  
+//	资源属性 0年度,1日常项目  
 	private Integer resourceType;
 //	年度预算头表ID
 	private Integer referenceId;

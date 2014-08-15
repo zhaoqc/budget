@@ -8,7 +8,7 @@
     <class name="dao.orm.YearBudgetIssuedProvincial" table="year_budget_issued_provincial" catalog="budget">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="orgId" type="java.lang.Integer">
             <column name="org_id" not-null="true" />
@@ -22,13 +22,13 @@
         <property name="userId" type="java.lang.Integer">
             <column name="user_id" />
         </property>
-        <property name="entryDatetime" type="java.sql.Timestamp">
+        <property name="entryDatetime" type="java.util.Date">
             <column name="entry_datetime" length="19" />
         </property>
         <property name="deleteId" type="java.lang.Integer">
             <column name="delete_id" />
         </property>
-        <property name="deleteDatetime" type="java.sql.Timestamp">
+        <property name="deleteDatetime" type="java.util.Date">
             <column name="delete_datetime" length="19" />
         </property>
         <property name="reserveAmount" type="java.math.BigDecimal">

@@ -1,8 +1,9 @@
 ﻿package dao.orm;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
+ * 省公司级预留
  * BudgetProvincialReserve entity. @author MyEclipse Persistence Tools
  */
 
@@ -14,7 +15,7 @@ public class BudgetProvincialReserve implements java.io.Serializable {
 	private BudgetProvincialReserveId id;
 	private Double amount;
 	private Integer userId;
-	private Timestamp entryDatetime;
+	private Date entryDatetime;
 	private String comments;
 
 	// Constructors
@@ -30,7 +31,7 @@ public class BudgetProvincialReserve implements java.io.Serializable {
 
 	/** full constructor */
 	public BudgetProvincialReserve(BudgetProvincialReserveId id, Double amount,
-			Integer userId, Timestamp entryDatetime, String comments) {
+			Integer userId, Date entryDatetime, String comments) {
 		this.id = id;
 		this.amount = amount;
 		this.userId = userId;
@@ -64,11 +65,11 @@ public class BudgetProvincialReserve implements java.io.Serializable {
 		this.userId = userId;
 	}
 
-	public Timestamp getEntryDatetime() {
+	public Date getEntryDatetime() {
 		return this.entryDatetime;
 	}
 
-	public void setEntryDatetime(Timestamp entryDatetime) {
+	public void setEntryDatetime(Date entryDatetime) {
 		this.entryDatetime = entryDatetime;
 	}
 

@@ -6,8 +6,8 @@
 
 public class BudgetProvincialReserveId implements java.io.Serializable {
 
-	// Fields
 
+	private static final long serialVersionUID = 1721641525850223372L;
 	private Integer orgId;
 	private Integer year;
 	private Integer version;

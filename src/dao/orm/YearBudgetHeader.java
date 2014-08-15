@@ -1,7 +1,6 @@
 ﻿package dao.orm;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Set;
 
@@ -35,9 +34,9 @@ public class YearBudgetHeader implements java.io.Serializable {
 //	结束时间
 	private Date endDate;
 //	创建表时间
-	private Timestamp entryDatetime;
+	private Date entryDatetime;
 //	更新表时间
-	private Timestamp updateDatetime;
+	private Date updateDatetime;
 //	详细
 	private Set<YearBudgetDetail> detailSet;
 	
@@ -138,19 +137,19 @@ public class YearBudgetHeader implements java.io.Serializable {
 		this.endDate = endDate;
 	}
 
-	public Timestamp getEntryDatetime() {
+	public Date getEntryDatetime() {
 		return this.entryDatetime;
 	}
 
-	public void setEntryDatetime(Timestamp entryDatetime) {
+	public void setEntryDatetime(Date entryDatetime) {
 		this.entryDatetime = entryDatetime;
 	}
 
-	public Timestamp getUpdateDatetime() {
+	public Date getUpdateDatetime() {
 		return this.updateDatetime;
 	}
 
-	public void setUpdateDatetime(Timestamp updateDatetime) {
+	public void setUpdateDatetime(Date updateDatetime) {
 		this.updateDatetime = updateDatetime;
 	}
 

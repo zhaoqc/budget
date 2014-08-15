@@ -37,10 +37,10 @@
         <property name="endDate" type="java.util.Date">
             <column name="end_date" length="10" />
         </property>
-        <property name="entryDatetime" type="java.sql.Timestamp">
+        <property name="entryDatetime" type="java.util.Date">
             <column name="entry_datetime" length="19" />
         </property>
-        <property name="updateDatetime" type="java.sql.Timestamp">
+        <property name="updateDatetime" type="java.util.Date">
             <column name="update_datetime" length="19" />
         </property>
         <set name="detailSet" inverse="true" >

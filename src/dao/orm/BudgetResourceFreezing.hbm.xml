@@ -8,7 +8,7 @@
     <class name="dao.orm.BudgetResourceFreezing" table="budget_resource_freezing" catalog="budget">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="projectCode" type="java.lang.Integer">
             <column name="project_code" />
@@ -22,7 +22,7 @@
         <property name="subjectCode" type="java.lang.String">
             <column name="subject_code" length="30" />
         </property>
-        <property name="amount" type="java.lang.Double">
+        <property name="amount" type="java.math.BigDecimal">
             <column name="amount" precision="11" scale="4" />
         </property>
         <property name="resourceType" type="java.lang.Integer">
