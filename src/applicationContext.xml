@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:aop="http://www.springframework.org/schema/aop"
@@ -27,8 +27,8 @@
   			<tx:method name="delete*" propagation="REQUIRED"/>
   			<tx:method name="del*" propagation="REQUIRED"/>
   			<tx:method name="update*" propagation="REQUIRED"/>
-  			<tx:method name="get*" propagation="REQUIRED"/><!-- 杩涜鏌ヨ鎿嶄綔鏈夋洿鏂版搷浣滃氨鐢╣et -->
-  			<tx:method name="*" read-only="true"/><!-- 鍙槸绠€鍗曠殑鏌ヨ灏辩敤select鍛藉悕 -->
+  			<tx:method name="get*" propagation="REQUIRED"/><!-- 进行查询操作有更新操作就用get -->
+  			<tx:method name="*" read-only="true"/><!-- 只是简单的查询就用select命名 -->
   		</tx:attributes>
   	</tx:advice>
   	 <aop:config>
@@ -40,29 +40,28 @@
 	<bean id="baseDao" abstract="true">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
-<!-- 	<bean id="annualBudgetingHeaderDao" class="dao.impl.AnnualBudgetingHeaderDaoImpl" parent="baseDao"/>
+	<bean id="annualBudgetingHeaderDao" class="dao.impl.AnnualBudgetingHeaderDaoImpl" parent="baseDao"/>
 	<bean id="annualBudgetingDetailDao" class="dao.impl.AnnualBudgetingDetailDaoImpl" parent="baseDao"/>
 	<bean id="annualBudgetingMonthDao" class="dao.impl.AnnualBudgetingMonthDaoImpl" parent="baseDao"/>
+	<bean id="yearBudgetHeaderDao" class="dao.impl.YearBudgetHeaderDaoImpl" parent="baseDao"/>
+	<bean id="yearBudgetDetailDao" class="dao.impl.YearBudgetDetailDaoImpl" parent="baseDao"/>
+	<bean id="yearBudgetMonthDao" class="dao.impl.YearBudgetMonthDaoImpl" parent="baseDao"/>
 	<bean id="tableIdsDao" class="dao.impl.TableIdsDaoImpl" parent="baseDao"/>
 	<bean id="yearProjectBudgetingService" class="service.impl.YearProjectBudgetingServiceImpl">
 		<property name="headerDao" ref="annualBudgetingHeaderDao"></property>
 		<property name="detailDao" ref="annualBudgetingDetailDao"></property>
 		<property name="monthDao" ref="annualBudgetingMonthDao"></property>
 	</bean>
-		<bean id="yearProjectBudgetingServiceTest" class="service.YearProjectBudgetingServiceTest">
-		<property name="yearProjectBudgetingService" ref="yearProjectBudgetingService"></property>
-	</bean> -->
-	
-	<bean id="yearBudgetHeaderDao" class="dao.impl.YearBudgetHeaderDaoImpl" parent="baseDao"/>
-	<bean id="yearBudgetDetailDao" class="dao.impl.YearBudgetDetailDaoImpl" parent="baseDao"/>
-	<bean id="yearBudgetMonthDao" class="dao.impl.YearBudgetMonthDaoImpl" parent="baseDao"/>
 	<bean id="yearProjectBudgetService" class="service.impl.YearProjectBudgetServiceImpl">
 		<property name="headerDao" ref="yearBudgetHeaderDao"></property>
 		<property name="detailDao" ref="yearBudgetDetailDao"></property>
 		<property name="monthDao" ref="yearBudgetMonthDao"></property>
 	</bean>
-	<bean id="yearProjectBudgetServiceTest" class="service.YearProjectBudgetServiceTest">
+	<bean id="yearProjectBudgetingServiceTest" class="service.YearProjectBudgetingServiceTest">
+		<property name="yearProjectBudgetingService" ref="yearProjectBudgetingService"></property>
+	</bean>
+	<!-- <bean id="yearProjectBudgetServiceTest" class="service.YearProjectBudgetServiceTest">
 		<property name="yearProjectBudgetService" ref="yearProjectBudgetService"></property>
-	</bean> 
+	</bean> -->
 	
 </beans>
