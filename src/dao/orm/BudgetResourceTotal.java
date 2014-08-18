@@ -15,10 +15,10 @@ public class BudgetResourceTotal implements java.io.Serializable {
 	private Integer projectCode;
 //	年份
 	private Integer year;
-//	业务活动编码
-	private String activityCode;
-//	科目编码
-	private String subjectCode;
+//	业务活动
+	private ActivityInfo activityInfo;
+//	科目
+	private SubjectInfo subjectInfo;
 //	金额
 	private BigDecimal amount;
 //	资源属性 0年度,1日常项目  
@@ -55,20 +55,21 @@ public class BudgetResourceTotal implements java.io.Serializable {
 		this.year = year;
 	}
 
-	public String getActivityCode() {
-		return this.activityCode;
+
+	public ActivityInfo getActivityInfo() {
+		return activityInfo;
 	}
 
-	public void setActivityCode(String activityCode) {
-		this.activityCode = activityCode;
+	public void setActivityInfo(ActivityInfo activityInfo) {
+		this.activityInfo = activityInfo;
 	}
 
-	public String getSubjectCode() {
-		return this.subjectCode;
+	public SubjectInfo getSubjectInfo() {
+		return subjectInfo;
 	}
 
-	public void setSubjectCode(String subjectCode) {
-		this.subjectCode = subjectCode;
+	public void setSubjectInfo(SubjectInfo subjectInfo) {
+		this.subjectInfo = subjectInfo;
 	}
 
 	public BigDecimal getAmount() {

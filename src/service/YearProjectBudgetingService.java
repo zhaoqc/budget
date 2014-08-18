@@ -7,16 +7,16 @@ import dao.orm.AnnualBudgetingHeader;
 
 public interface YearProjectBudgetingService {
 	/**
-	 * 根据annualBudgetingHeader年度预算头表插入项目信息
+	 * 根据annualBudgetingHeader年度编制头表插入项目信息
 	 * @author 赵青城
 	 * @param annualBudgetingHeader年度预算头表
 	 * @return 插入项目信息
 	 */
 	AnnualBudgetingHeader saveBudgeting(AnnualBudgetingHeader header);
 	/**
-	 * 根据annualBudgetingHeader年度预算头表更新项目信息
+	 * 根据annualBudgetingHeader年度编制头表更新项目信息
 	 * @author 赵青城
-	 * @param annualBudgetingHeader年度预算头表
+	 * @param annualBudgetingHeader
 	 * @return 更新项目信息
 	 */
 	AnnualBudgetingHeader updateBudgeting(AnnualBudgetingHeader header);
@@ -28,6 +28,12 @@ public interface YearProjectBudgetingService {
 	 */
 	AnnualBudgetingHeader getBudgeting(Integer id);
 	
+	/**
+	 * 根据年度编制项目编号和年度查询
+	 * @param projectCode
+	 * @param year
+	 * @return
+	 */
 	AnnualBudgetingHeader getBudgeting(Integer projectCode,Integer year);
 	
 	/**

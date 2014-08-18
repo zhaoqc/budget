@@ -16,12 +16,8 @@
         <property name="year" type="java.lang.Integer">
             <column name="year" />
         </property>
-        <property name="activityCode" type="java.lang.String">
-            <column name="activity_code" length="30" />
-        </property>
-        <property name="subjectCode" type="java.lang.String">
-            <column name="subject_code" length="30" />
-        </property>
+      	<many-to-one name="activityInfo" class="dao.orm.ActivityInfo" column="activity_code"></many-to-one>
+        <many-to-one name="subjectInfo" class="dao.orm.SubjectInfo" column="subject_code"></many-to-one>
         <property name="amount" type="java.math.BigDecimal">
             <column name="amount" precision="11" scale="4" />
         </property>

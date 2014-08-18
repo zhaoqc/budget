@@ -1,5 +1,6 @@
 ﻿package service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -21,13 +22,19 @@ public interface YearProjectBudgetService {
 	 */
 	YearBudgetHeader updateBudget(YearBudgetHeader header);
 	/**
-	 * 根据年度编制项目的id查找该项目的信息
+	 * 根据年度项目的id查找该项目的信息
 	 * @author 赵春林
 	 * @param id 年度项目的主键ID
 	 * @return 查找到的项目信息
 	 */
 	YearBudgetHeader getBudget(Integer id);
 	
+	/**
+	 * 根据年度预算项目的编号和年份查询
+	 * @param projectCode
+	 * @param year
+	 * @return
+	 */
 	YearBudgetHeader getBudget(Integer projectCode,Integer year);
 	
 	/**
@@ -65,4 +72,6 @@ public interface YearProjectBudgetService {
 	 * @return
 	 */
 	List<Map<String,Object>> getOrgProjectReport(Integer orgId,Integer year);
+	
+	BigDecimal getAvailableResource(String projectCode,Integer year);
 }

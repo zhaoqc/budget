@@ -1,5 +1,6 @@
 ﻿package service.impl;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -143,6 +144,11 @@ public class YearProjectBudgetServiceImpl implements YearProjectBudgetService {
 		header.setStatus(2);
 		headerDao.update(header);
 		return header;
+	}
+
+	@Override
+	public BigDecimal getAvailableResource(String projectCode, Integer year) {
+		return null;
 	}
 
 }

@@ -27,6 +27,9 @@
   			<tx:method name="delete*" propagation="REQUIRED"/>
   			<tx:method name="del*" propagation="REQUIRED"/>
   			<tx:method name="update*" propagation="REQUIRED"/>
+  			<tx:method name="reject*" propagation="REQUIRED"/>
+  			<tx:method name="sbumit*" propagation="REQUIRED"/>
+  			<tx:method name="endApprove*" propagation="REQUIRED"/>
   			<tx:method name="get*" propagation="REQUIRED"/><!-- 进行查询操作有更新操作就用get -->
   			<tx:method name="*" read-only="true"/><!-- 只是简单的查询就用select命名 -->
   		</tx:attributes>
@@ -60,7 +63,7 @@
 	<bean id="yearProjectBudgetingServiceTest" class="service.YearProjectBudgetingServiceTest">
 		<property name="yearProjectBudgetingService" ref="yearProjectBudgetingService"></property>
 	</bean>
-	 <bean id="yearProjectBudgetServiceTest" class="service.YearProjectBudgetServiceTest">
+	<bean id="yearProjectBudgetServiceTest" class="service.YearProjectBudgetServiceTest">
 		<property name="yearProjectBudgetService" ref="yearProjectBudgetService"></property>
 	</bean>
 	
