@@ -65,14 +65,15 @@
 				});
 				//本年立项时间
 				jQuery("#startDate1").click(function() {
-					WdatePicker({el:'startDate',minDate:'<%=year %>-01-01 00:00:00',maxDate:'<%=year %>-12-31 23:59:59'});
+
+					WdatePicker({el:'startDate',minDate:$(this).parent().parent().find('input[name^=\'startDate\']').val(),maxDate:'<%=year %>-12-31 23:59:59'})
 				});
 				jQuery("#endDate1").click(function() {
 					WdatePicker({el:'endDate',minDate:$(this).parent().parent().find('input[name^=\'startDate\']').val(),maxDate:'<%=year %>-12-31 23:59:59'})
 				});
 				//跨年立项时间
 				jQuery("#startDate2").click(function() {
-					WdatePicker({el:'startDate',minDate:'<%=year %>-01-01 00:00:00',maxDate:'<%=year %>-12-31 23:59:59'});
+					WdatePicker({el:'startDate',minDate:$(this).parent().parent().find('input[name^=\'startDate\']').val(),maxDate:'<%=year %>-12-31 23:59:59'})
 				});
 				jQuery("#endDate2").click(function() {
 					WdatePicker({el:'endDate',minDate:'<%=year+1 %>-01-01 00:00:00'});
