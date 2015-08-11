@@ -254,6 +254,7 @@
 			<tr>
 				<c:if test="${dprojTypeDetail eq 'provToComp' }">
 					<td>
+					<!--prov:省公司追加分公司资源;在1月份这个值取消掉了，如果要恢复直接使用这个JSP覆盖恢复-->
 						<tag:dic name="provToCompType" value="" staticDic="prov:省公司追加分公司资源;comp:分公司自行承担资源支出" showType="select" ></tag:dic><font color="red"> *</font>
 					</td>
 					<td>
